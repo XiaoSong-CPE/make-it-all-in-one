@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.xaml": "xml",
+        "*.xaml.cs": "csharp"
+    },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.xaml": "${basename}.xaml.cs, ${basename}.xaml.vm.cs",
+    }
+}

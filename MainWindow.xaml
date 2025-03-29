@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="make_it_all_in_one.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:make_it_all_in_one"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+
+    <Grid>
+
+        <!-- Custom TitleBar -->
+        <Border x:Name="AppTitleBar"
+            Background="Transparent"
+            VerticalAlignment="Top"
+            Height="32">
+            <TextBlock x:Name="AppTitle"
+                Text="Test Title Bar"
+                VerticalAlignment="Center"
+                Margin="12,0,0,0" />
+        </Border>
+
+        <NavigationView x:Name="nvSample"
+            IsTitleBarAutoPaddingEnabled="True"
+            Margin="0,32,0,0"
+            SelectionChanged="MenuSelectionChanged">
+            <NavigationView.Header>
+                Header
+            </NavigationView.Header>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Home"
+                    Content="Home"
+                    Tag="HomePage" />
+                <NavigationViewItem Icon="Audio"
+                    Content="All-in-one Audio"
+                    Tag="AudioPage" />
+                <NavigationViewItem Icon="Video"
+                    Content="All-in-one Video"
+                    Tag="VideoPage" />
+                <NavigationViewItem Content="All-in-one Model"
+                    Tag="ModelPage">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF158;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="36">
+                <Frame x:Name="contentFrame"
+                    Background="Transparent" />
+            </ScrollViewer>
+        </NavigationView>
+    </Grid>
+</Window>
