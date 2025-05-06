@@ -21,18 +21,17 @@
             VerticalAlignment="Top"
             Height="32">
             <TextBlock x:Name="AppTitle"
-                Text="Test Title Bar"
+                Text="File Stitcher"
                 VerticalAlignment="Center"
                 Margin="12,0,0,0" />
         </Border>
 
+        <!-- Navigation View -->
         <NavigationView x:Name="nvSample"
             IsTitleBarAutoPaddingEnabled="True"
             Margin="0,32,0,0"
             SelectionChanged="MenuSelectionChanged">
-            <NavigationView.Header>
-                Header
-            </NavigationView.Header>
+            <NavigationView.Header Content="{x:Bind HeaderText, Mode=OneWay}" />
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Home"
                     Content="Home"
